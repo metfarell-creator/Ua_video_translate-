@@ -17,8 +17,6 @@ transformers>=4.40.0
 accelerate
 sentencepiece
 python-dotenv
-numpy
-pyyaml
 
 # (опційно) діаризація
 # pyannote.audio==2.1.1
