@@ -35,6 +35,7 @@ SoniTranslate_UA_Portable/
   config/
     presets/uk_to_uk.yaml          # пресет дубляжу uk→uk
   pipeline/
+    __init__.py
     asr.py                         # WhisperX-обгортка
     tts.py                         # StyleTTS2 (українські чекпойнти)
     align.py                       # підгін озвучки під таймінги
@@ -69,6 +70,14 @@ SoniTranslate_UA_Portable/
 - Якщо GPU/драйвер не підходить — інсталятор автоматично перейде на CPU‑колеса Torch.
 - WhisperX ставимо **з PyPI** (стабільний шлях).
 - StyleTTS2 беремо як пакет **`styletts2`** + UA чекпойнти з HuggingFace (автозавантаження в кеш).
+
+## CLI-сценарії
+
+- `python scripts/dub_from_srt.py subs.srt dubbed.wav` — синтезує українську доріжку за готовими субтитрами (можна додати `--original video.mp4` для міксу з оригіналом).
+- `python scripts/export_video.py input.mp4 dubbed.wav output.mp4 --overwrite` — підмінює звукову доріжку у відео через FFmpeg.
+- `python tools/prefetch_models.py` — попередньо завантажує моделі WhisperX/StyleTTS2 у кеш (зчитує параметри з `config/presets/uk_to_uk.yaml`).
+
+Gradio-інтерфейс зберігає результати у каталозі `outputs/` (`.wav`, `.mp4`, `.srt`, `.json`).
 
 ## Ліцензія
 
