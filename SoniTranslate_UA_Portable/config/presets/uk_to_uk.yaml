@@ -1,0 +1,22 @@
+# Пресет: українська → українська (без перекладу)
+asr_model: "large-v3"
+language: "uk"
+device: "cuda"     # або "cpu"
+compute_type: "float16"   # або "int8"
+diarization: false
+
+tts:
+  repo: "patriotyk/styletts2-ukrainian"
+  checkpoint_glob: "*.pth"
+  config_glob: "*config*.y*ml"
+  sample_rate: 24000
+  speed: 1.0
+
+timing:
+  head_pad_ms: 70
+  tail_pad_ms: 120
+  min_gap_ms: 80
+  slack_before_ms: 120
+  slack_after_ms: 180
+  fade_ms: 40
+  max_trim_overflow_ms: 220
