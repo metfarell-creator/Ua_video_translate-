@@ -1,0 +1,22 @@
+# Пінінг стабільних залежностей (Python 3.10–3.11)
+
+# ASR
+whisperx==3.3.4
+ctranslate2==4.5.0
+
+# TTS
+styletts2==0.1.6
+
+# UI та утиліти
+gradio>=5.0.0
+yt-dlp
+pydub
+ffmpeg-python
+huggingface_hub
+transformers>=4.40.0
+accelerate
+sentencepiece
+python-dotenv
+
+# (опційно) діаризація
+# pyannote.audio==2.1.1
